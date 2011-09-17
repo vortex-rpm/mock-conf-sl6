@@ -6,7 +6,7 @@ Version:	1
 Release:	1.vortex%{?dist}
 Vendor:		Vortex RPM
 License:	GPLv3
-Group:		System Environment/Base
+Group:		Development/Tools
 URL:		http://vortex-rpm.org/
 Source0:	sl-6-x86_64.cfg
 Source1:	sl-6-i386.cfg
