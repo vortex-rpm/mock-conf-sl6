@@ -3,7 +3,7 @@
 Summary:	Mock configs for SL6
 Name:		mock-conf-sl6
 Version:	1
-Release:	1.vortex%{?dist}
+Release:	2.vortex%{?dist}
 Vendor:		Vortex RPM
 License:	GPLv3
 Group:		Development/Tools
@@ -31,11 +31,14 @@ install -D -p -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/mock/sl-6-i386.cfg
 rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root,-)
+%defattr(-,root,mock,-)
 %config(noreplace) %{_sysconfdir}/mock/sl-6-x86_64.cfg
 %config(noreplace) %{_sysconfdir}/mock/sl-6-i386.cfg
 
 %changelog
-* Tue Sep 09 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1-1.vortex
-- Initial packaging for Enterprise Linux.
+* Thu Nov 17 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1-2.vortex
+- Fix files ownership.
+- Move from custom mirrorlist to official baseurl.
 
+* Tue Sep 09 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1-1.vortex
+- Initial packaging for Enterprise Linux.
