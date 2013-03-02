@@ -2,8 +2,8 @@
 
 Summary:	Mock configs for SL6
 Name:		mock-conf-sl6
-Version:	1
-Release:	2.vortex%{?dist}
+Version:	2
+Release:	1.vortex%{?dist}
 Vendor:		Vortex RPM
 License:	GPLv3
 Group:		Development/Tools
@@ -16,6 +16,11 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
 This package contains Scientific Linux 6 configuration files for mock.
+
+The additional repositories are:
+- EPEL
+- IUS
+- Vortex
 
 %prep
 %setup -q -c -T
@@ -36,6 +41,9 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/mock/sl-6-i386.cfg
 
 %changelog
+* Sun Mar  3 2013 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 2-1.vortex
+- Add IUS and Vortex.
+
 * Thu Nov 17 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1-2.vortex
 - Fix files ownership.
 - Move from custom mirrorlist to official baseurl.
