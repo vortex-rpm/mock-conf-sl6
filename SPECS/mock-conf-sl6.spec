@@ -2,7 +2,7 @@
 
 Summary:	Mock configs for SL6
 Name:		mock-conf-sl6
-Version:	2
+Version:	3
 Release:	1.vortex%{?dist}
 Vendor:		Vortex RPM
 License:	GPLv3
@@ -41,6 +41,9 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/mock/sl-6-i386.cfg
 
 %changelog
+* Tue Apr  1 2014 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 3-1.vortex
+- Switch to more convenient mirrors on sl and sl-security.
+
 * Sun Mar  3 2013 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 2-1.vortex
 - Add IUS and Vortex.
 
