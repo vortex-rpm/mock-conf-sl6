@@ -2,7 +2,7 @@
 
 Summary:	Mock configs for SL6
 Name:		mock-conf-sl6
-Version:	3
+Version:	4
 Release:	1.vortex%{?dist}
 Vendor:		Vortex RPM
 License:	GPLv3
@@ -21,6 +21,7 @@ The additional repositories are:
 - EPEL
 - IUS
 - Vortex
+- Vortex (noarch)
 
 %prep
 %setup -q -c -T
@@ -41,6 +42,9 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/mock/sl-6-i386.cfg
 
 %changelog
+* Fri Apr  4 2014 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 4-1.vortex
+- Add vortex-noarch repo.
+
 * Tue Apr  1 2014 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 3-1.vortex
 - Switch to more convenient mirrors on sl and sl-security.
 
